@@ -6,7 +6,7 @@ A simple waitlist page connected to Google Sheets - Add link, add script to gshe
 
 ### Step 1: Google Sheets Setup
 
-a. Create a new Google Sheet.
+a. Create a new Google Sheet. name the column on the first row as "email" and second column on the first row as "date" [No Caps].
 
 b. Click extensions and click APP Scripts
 
