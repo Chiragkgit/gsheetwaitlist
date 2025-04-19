@@ -64,7 +64,7 @@ a. To run this on the server of vercel. Deploy your app.
 b. Navigate to settings of your project / deployment, Environment Variables -> Add your GOOGLE_SCRIPT_URL and "Your Web App URL" in the relevant columns. 
 c. Hit Save
 
-Done. Go go go!
+#Done. Go go go!
 
 ---
 
