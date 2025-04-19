@@ -1,14 +1,16 @@
-# gsheetwaitlist
-Waitlist page connected to Google Sheets - Add link, add script to gsheet and go.
+# GSheet Waitlist
 
+A simple waitlist page connected to Google Sheets - Add link, add script to gsheet and go.
 
-Step 1: 
+## Setup Instructions
+
+### Step 1: Google Sheets Setup
+
 a. Create a new Google Sheet.
 b. Click extensions and click APP Scripts
-c. Copy this code and paste it into the script wind (Delete whatever ctrl A + Delete)
+c. Copy this code and paste it into the script window (Delete whatever ctrl A + Delete)
 
-
-'''
+```javascript
 function doPost(e) {
   // Set CORS headers
   var headers = {
@@ -36,53 +38,41 @@ function doPost(e) {
     .setMimeType(ContentService.MimeType.JSON)
     .setHeaders(headers);
 }
-
-'''
-
+```
 
 d. Click deploy -> New Deployment
-
 e. Click the little settings icon next to select type -> Web App
 f. Configuration -> Add a Description, Execute as "Your Account", Who has Accesss "Anyone"
 g. Hit Deploy 
 h. Grab the Web App Url for Step 2
 
-If stuck on unable to login on "f", for access set "yourself" -> login -> change access to "Anyone"
+> **Note:** If stuck on unable to login on "f", for access set "yourself" -> login -> change access to "Anyone"
 
+### Step 2: Local Development Setup
 
-Step 2: 
 Clone this repo into wherever you need to / For local dev testing 
-a. Create .env.local file
-b. Add this in the file GOOGLE_SCRIPT_URL="Your Web App URL here"
-C. Save and run your dev server and start testing
+a. Create `.env.local` file
+b. Add this in the file:
+```bash
+GOOGLE_SCRIPT_URL="Your Web App URL here"
+```
+c. Save and run your dev server and start testing
 
+### Step 3: Production Deployment
 
-Step3: 
 a. To run this on the server of vercel. Deploy your app. 
 b. Navigate to settings of your project / deployment, Environment Variables -> Add your GOOGLE_SCRIPT_URL and "Your Web App URL" in the relevant columns. 
 c. Hit Save
 
-
 Done. Go go go!
 
+---
 
+## Quick Start
 
+The point of this codebase is to get you running with a waitlist in 5 mins. Clone this repo to your directory.
 
-
-
-
-
-The point of this codebase is to get you running with a waitlist in 5 mins. Clone this repo to your directory. 
-
-
-
-
-
-
-
-
-
-Running and Deploying on Vercel instructions below
+### Running Locally
 
 First, run the development server:
 
